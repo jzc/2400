@@ -1,0 +1,49 @@
+0: 40193d
+1: 401855
+2: 40183b
+3: 40186d
+4: 4018f9
+5: 4018a3
+6: 401866
+7: 401855
+8: 40179c
+
+
+0: setval_350 (48 89 e0 90 c3) 
+mov %rsp, %rax
+nop
+ret 1
+
+1: setval_426 (48 89 c7 90 c3) 
+mov %rax, %rdi
+nop
+ret 2
+
+2: addval_219 (58 90 c3)
+pop %rax
+nop
+ret 3
+
+3: getval_481 (89 c2 90 c3) 
+mov %eax, %edi
+nop
+ret 4
+
+4: getval_311 (89 d1 08 db c3) 
+mov %edx, %ecx
+orb %bl, %bl
+ret 5
+
+5: addval_436 (89 ce 90 90 c3) 
+mov %ecx, %esi
+nop
+nop
+ret 6
+
+6: add_xy (48 8d 04 37 c3)
+lea (%rdi, %rsi, 1), %rax
+ret 7
+
+7: setval_426 (48 89 c7 90 c3)
+mov %rax, %rdi
+ret 8

